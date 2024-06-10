@@ -1,0 +1,20 @@
+Debouncing and throttling are two techniques used in web development, particularly in handling user input or events, to control the frequency at which a function is executed. Here's the difference between them and when to use each:
+
+1. Debouncing:
+   - Debouncing is a technique used to ensure that a function is not executed too frequently, especially in scenarios like handling user input events such as typing or scrolling.
+   - When an event is triggered, the debouncing function will wait for a specified period of "quiet" time before executing the associated function.
+   - If another event occurs within that quiet time, the timer resets. This means that the function will only be executed once after a series of rapid events with a pause between them.
+   - Common use cases for debouncing include handling search input fields, auto-complete suggestions, and resize or scroll events.
+
+2. Throttling:
+   - Throttling, on the other hand, limits the maximum number of times a function can be called over a specified period, usually by delaying the execution of the function until a certain amount of time has passed since the last invocation.
+   - Unlike debouncing, where only one function call is made after the quiet period, throttling ensures a function is executed periodically at a set interval.
+   - Throttling is useful in scenarios like handling mousemove or scroll events, where you want to limit the frequency of updates to improve performance.
+   - It guarantees that the function is called at most once per specified interval, even if the event is triggered multiple times within that interval.
+
+When to Use:
+- Debouncing: Use debouncing when you want to ensure that a function is only called after a period of inactivity following an event. This is useful for scenarios where rapid firing of events shouldn't result in multiple function executions, such as search inputs or handling rapid resize events.
+  
+- Throttling: Use throttling when you want to limit the rate at which a function is called. This is useful for scenarios where frequent function calls can degrade performance or flood a server with requests. Examples include handling scroll or mousemove events.
+
+debouncing ensures a function is executed after a period of inactivity, while throttling limits the frequency of function calls over time. Both techniques are valuable tools for improving the performance and responsiveness of web applications.
